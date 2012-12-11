@@ -1,7 +1,6 @@
 var appTools = {
     //打开url
     openUrl : function(url){
-
         fusion2.nav.open({url:url});
     },
 
@@ -16,14 +15,14 @@ var appTools = {
 
     //最新留言
     getLatestMsg : function(){
-        msgContainer = jQuery("#msgContainer");
-        jQuery.getJSON(baseUrl + "main/Ajax/GetLatestMsg", '', function(data){
+        var msgContainer = jQuery("#msgContainer");
+        jQuery.getJSON(baseUrl + "/main/Ajax/GetLatestMsg", function(data){
             var html = "";
             if(data.result_count > 0){
                 var i = 0;
                 for(i in data.msgs){
                     var addClass = (i == 0) ? "" : "nodisplay";
-                    html += "<span class='clickMsg " + addClass + "' msgId='" + data.msgs[i]['autoid'] + "'>" + "<a href='javascript:' >" + data.msgs[i]['msg'] + "</a></span>";
+                    html += "<span class='clickMsg " + addClass + "' msgId='" + data.msgs[i]['autoid'] + "'>" + "<a class='br' href='javascript:' >" + data.msgs[i]['msg'] + "</a></span>";
                 }
                 html += "<span class='nodisplay'>暂无新消息</span>";
             }else{
@@ -31,7 +30,6 @@ var appTools = {
             }
 
             msgContainer.html(html);
-
             jQuery(".clickMsg").click(appTools.showNextMsg);
         })
     },
@@ -47,14 +45,14 @@ var appTools = {
 
     //更新剩余未读消息的数量(伪)
     updateMsgLeft : function(){
-        var curLeft = parseInt(jQuery(".msgLeft").eq(0).html()) - 1;
-        jQuery(".msgLeft").html( curLeft > 0 ? curLeft : 0)
+        var curLeft = parseInt(jQuery('.msgLeft').eq(0).html()) - 1;
+        jQuery('.msgLeft').html( curLeft > 0 ? curLeft : 0)
     },
 
     //购买
     shopping: function(productId){
         jQuery.getJSON(baseUrl + "/main/Ajax/BuyProduct", {productId:productId}, function(msg){
-            var returnVal = parseInt(msg.return);
+            var returnVal = parseInt(msg.result);
             if(returnVal > 0){
                 location.reload();
             }else{
@@ -72,17 +70,10 @@ var appTools = {
     //每日签到
     signDaily: function(){
         var obj = jQuery(this);
-        jQuery.getJSON(baseUrl + "/main/Ajax/SignDaily",{},function(data){
-            var returnVal = parseInt(data.return);
+        jQuery.getJSON(baseUrl + "/main/Ajax/SignDaily",function(data){
+            var returnVal = parseInt(data.result);
             if(returnVal > 0){
                 location.reload();
-                /*
-                //样式修正
-                jQuery(".signButton").unbind("click");
-                obj.removeClass("m");
-                obj.addClass("h");
-                obj.html("已签到");
-                */
             }else{
                 if(returnVal == -1){
                     alert('您今天已经签到过了');
@@ -93,13 +84,13 @@ var appTools = {
         });
     },
 
+
     //使用时光机
     useTimeMachine :  function(){
         jQuery.getJSON(
             baseUrl + "/main/Ajax/IsHaveTimeMachine",
-            {},
             function(data){
-                if(parseInt(data.return) > 0){
+                if(parseInt(data.result) > 0){
                     appTools.showFloat(1, function(){ location.href = baseUrl + '/main/Index/TryPageTimeMachine'; });
                 }else{
                     alert("您还没有时光机， 请去用户中心购买");
@@ -115,9 +106,8 @@ var appTools = {
     useGotFirst : function(){
         jQuery.getJSON(
             baseUrl + "/main/Ajax/IsHaveGotFirst",
-            {},
             function(data){
-                if(parseInt(data.return) > 0){
+                if(parseInt(data.result) > 0){
                     appTools.showFloat(4, function(){ location.reload();});
                 }else{
                     alert("您还没有先到先抢， 请去用户中心购买");
@@ -128,6 +118,7 @@ var appTools = {
             }
         );
     },
+
     //显示浮动层
     showFloat : function(floatId, closeFunc){
         var content = jQuery("#overlay"+floatId).html();
@@ -138,7 +129,7 @@ var appTools = {
     //第一次登录弹窗
     firstEnter : function(){
         jQuery(".init").show();
-        jQuery.getJSON( baseUrl + "/main/Ajax/setFirstEnterFalse", "", function(){});
+        jQuery.getJSON( baseUrl + "/main/Ajax/setFirstEnterFalse",  function(){});
     },
 
     //关闭init窗口
@@ -149,6 +140,7 @@ var appTools = {
 
 
 jQuery(function(){
+    //jQuery.ajaxSetup({ cache: false });
     jQuery(".shoppingButton").click(function(){
         appTools.shopping(jQuery(this).attr("productId"));
     });

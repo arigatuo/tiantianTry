@@ -227,7 +227,7 @@ class AjaxController extends Controller
                 }
             }
 
-            echo json_encode(array("return"=>$return));
+            echo json_encode(array("result"=>$return));
         }
     }
 
@@ -265,14 +265,14 @@ class AjaxController extends Controller
                 }
             }
         }
-        echo json_encode(array('return' => $return));
+        echo json_encode(array('result' => $return));
     }
 
     //判断是否有时光机
     public function actionIsHaveTimeMachine(){
         $return = UserProduct::isUserHaveThisProduct(1);
         echo json_encode(
-            array('return' => $return)
+            array('result' => $return)
         );
     }
 
@@ -280,7 +280,7 @@ class AjaxController extends Controller
     public function actionIsHaveGotFirst(){
         $return = UserProduct::isUserHaveThisProduct(2, 1);
         echo json_encode(
-            array('return' => $return)
+            array('result' => $return)
         );
     }
 

@@ -46,7 +46,7 @@ return array(
     'gotFirst' => array(
         'firstBuy' => array(
             'gold' => 0,
-            'msg' => '你已成功购买“折扣到底”卡，尊享1-3折优惠，每张只能看一个宝贝哦~~',
+            'msg' => '你已成功获得“折扣到底”卡，尊享1-3折优惠，每张只能看一个宝贝哦~~',
         ),
         'firstEnter' => array(
             'gold' => 0,

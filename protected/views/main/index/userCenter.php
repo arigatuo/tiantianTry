@@ -1,11 +1,6 @@
 <?php
     $baseUrl = Yii::app()->baseUrl."/";
 ?>
-<script type="text/javascript">
-    jQuery(function(){
-        appTools.getLatestMsg();
-    });
-</script>
 <div class="userinfo">
     <div class="top">
         <div class="u"><a href="#" target="_blank" class="pic"><img src="<?php echo $this->_userInfo['head'];?>" width="50" height="50" alt="<?php echo $this->_userInfo['nickname'];?>"></a>
@@ -78,3 +73,6 @@
         ?>
     </ul>
 </div>
+<script type="text/javascript">
+        appTools.getLatestMsg();
+</script>

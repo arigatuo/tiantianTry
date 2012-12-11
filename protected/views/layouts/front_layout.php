@@ -91,7 +91,7 @@
                 summary : '<?php echo $config->itemAt("dialog_summary"); ?>',
                 msg: '<?php echo $config->itemAt("dialog_msg"); ?>',
             //button :"获取能量",
-                context: '<?php echo $config->itemAt('dialog_context'); ?>',
+                context: '<?php echo $config->itemAt('dialog_context'); ?>'
             },
             //qq分享
             sendStory : function(xid, succFunc){
@@ -302,7 +302,7 @@
             $isSign = UserLoginRecord::isSignToday($this->_userInfo['userid']);
             $signButtonClass = $isSign ?  "b h" : "b m signButton" ;
         ?>
-        <div class="fr">领 <span class="m"><?php echo !empty($signDetail['gold']) ? $signDetail['gold'] : 20; ?></span> 元宝 <a href="javascript:" class="<?php echo $signButtonClass;?>" id="isSign">签到</a></div>
+        <div class="fr">领 <span class="m"><?php echo !empty($signDetail['gold']) ? $signDetail['gold'] : 20; ?></span> 元宝 <a href="javascript:" class="<?php echo $signButtonClass;?>" id="isSign"><?php echo $isSign? "已":"";?>签到</a></div>
     </div>
     <?php
         }

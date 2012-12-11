@@ -47,11 +47,11 @@ class Item extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, endtime, category_id, photo, type_id, url', 'required'),
+			array('title,  category_id, photo, type_id, url', 'required'),
 			array('is_top, free_trans', 'numerical', 'integerOnly'=>true),
 			array('price, special_price', 'numerical'),
 			array('title, photo,fixDate', 'length', 'max'=>255),
-			array('category_id, pieces, share_time, fav_time, already_buy', 'length', 'max'=>10),
+			array('category_id, endtime, pieces, share_time, fav_time, already_buy', 'length', 'max'=>10),
 			array('is_free', 'length', 'max'=>1),
 			array('description', 'safe'),
 			// The following rule is used by search().

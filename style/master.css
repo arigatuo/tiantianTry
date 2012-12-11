@@ -99,7 +99,11 @@
 .userinfo .bottom { }
 .userinfo .bl { float:left; width:80px; padding:0 0 0 50px; height:32px; line-height:32px; background:url(../images/s.png) no-repeat -716px -295px; position:relative; }
 .userinfo .bl .new { position:absolute; width: 24px; height: 9px; background:url(../images/s.png) no-repeat -736px -339px; left:44px; top:-5px; }
+
+.userinfo .br,.userinfo .br:visited{ float:left; display:block;width:600px; height:32px; line-height:32px; background:#e8e8e8; color:#333; text-indent:13px; }
+.userinfo .br:hover { background:#D12E67; color:#fff; text-decoration:none;}
 .userinfo .br { float:left; width:600px; height:32px; line-height:32px; background:#e8e8e8; color:#333; text-indent:13px; }
+
 .shop { width:738px; margin:20px auto 0; }
 .shop .hd { color:#f96700; font-size:16px; border-bottom:1px solid #DBDBDB; padding-bottom:6px; text-indent:6px; }
 .shop .bd { margin-top:8px; background:#F6F6F6; overflow:hidden; zoom:1; line-height:24px; }
@@ -192,3 +196,5 @@
 .nodisplay{display:none}
 .clickMsg{width:580px;cursor: alias;}
 #cboxClose{display:none}
+
+
