@@ -113,19 +113,21 @@ class AjaxController extends Controller
     }
 
     /*
-     *
+     *给用户奖金币
      */
     public function actionUpdateTrigger(){
         if(Yii::app()->request->isAjaxRequest){
+            $userInfo = Userinfo::getUserId(1, 0);
             if(!empty($userInfo['userid'])){
                 $uid = $userInfo['userid'];
-                Trigger::shareAward($_POST['type']);
+                if(!empty($_GET['the_type']))
+                    Trigger::shareAward($_GET['the_type']);
             }
         }
     }
 
     /**
-     *
+     *用户是否关注者
      */
     public function actionUpdateIsFans(){
         if(Yii::app()->request->isAjaxRequest){
@@ -191,8 +193,6 @@ class AjaxController extends Controller
             }
         }
     }
-
-
 
     //购买商品
     public function actionBuyProduct(){

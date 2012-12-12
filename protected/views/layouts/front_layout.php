@@ -12,11 +12,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <title>我要试用</title>
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/style/base.css?v=<?php echo date("YmdH");?>">
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/style/master.css?v=<?php echo date("YmdH");?>">
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/css/colorbox.css?v=<?php echo date("YmdH");?>">
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/style/base.css?v=<?php echo date("YmdHi");?>">
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/style/master.css?v=<?php echo date("YmdHi");?>">
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/css/colorbox.css?v=<?php echo date("YmdHi");?>">
     <script src="http://www.lady8844.com/images/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="<?php echo Yii::app()->baseUrl;?>/js/tools.js" type="text/javascript"></script>
+    <script src="<?php echo Yii::app()->baseUrl;?>/js/tools.js?v=<?php echo date("YmdHi");?>" type="text/javascript"></script>
     <script type="text/javascript" charset="utf-8"  src="http://fusion.qq.com/fusion_loader?appid=<?php echo $appId?>&platform=qzone"> </script>
     <script type="text/javascript" src="<?php echo $baseUrl;?>js/jquery.colorbox-min.js"></script>
     <script type="text/javascript">
@@ -93,13 +93,24 @@
             //button :"获取能量",
                 context: '<?php echo $config->itemAt('dialog_context'); ?>'
             },
+            readImg : function(xid){
+                var result = false;
+                if(parseInt(xid) > 0){
+                    result = jQuery("#itempic_"+xid).attr("src");
+                }
+
+                return result;
+            },
             //qq分享
-            sendStory : function(xid, succFunc){
+            sendStory : function(xid, succFunc, othxid){
                 var content = tools.shareContent;
+                var usedXid = (typeof othxid !== 'undefined') ? othxid : xid;
+                var imgsrcResult = tools.readImg(usedXid);
+                var imgsrc = imgsrcResult ? imgsrcResult : content.img;
                 fusion2.dialog.sendStory
                         ({
                             title : content.title,
-                            img: content.img,
+                            img: imgsrc,
                             summary : content.summary,
                             msg: content.msg,
                             //button :"获取能量",
@@ -156,7 +167,12 @@
                         */
             },
             trigger : function(the_type){
-                jQuery.getJSON('<?php echo Yii::app()->createUrl("main/Ajax/updateTrigger");?>', {the_type:the_type}, function(){location.reload();} );
+                if(the_type == "fav_time"){
+                    jQuery.getJSON('<?php echo Yii::app()->createUrl("main/Ajax/updateTrigger");?>', {the_type:the_type}, function(data){ appTools.userAddGoldInJs(data.usergold)} );
+                    appTools.showFloat(3);
+                }else if(the_type == "share_time"){
+                    jQuery.getJSON('<?php echo Yii::app()->createUrl("main/Ajax/updateTrigger");?>', {the_type:the_type}, function(data){ appTools.userAddGoldInJs(data.usergold)} );
+                }
             },
             updateState: function(){
                 $.ajax({
@@ -171,7 +187,8 @@
                 });
             },
             bindHover : function(){
-                $(".prolist .item").hover(tools.attention_box);
+                //解除关注框
+                //$(".prolist .item").hover(tools.attention_box);
             }
         };
         $(function(){
@@ -182,7 +199,7 @@
             });
 
             //收藏
-            $(".favorite").click( tools.favBox );
+            $(".favorite2").click( tools.favBox );
             $(".handsel").click( tools.shareBox );
 
             //关注
@@ -252,8 +269,8 @@
 <body>
 <div class="wrap">
     <div class="logo-ad">
-        <div class="logo"><a href="#"><img src="<?php echo $baseUrl;?>images/logo.gif" width="165" height="39" title="天天试用"></a></div>
-        <div class="ad"><a href="#"><img src="<?php echo $baseUrl;?>images/del_55073.jpg" width="550" height="73"></a></div>
+        <div class="logo"><a href="javascript:"><img src="<?php echo $baseUrl;?>images/logo.gif" width="165" height="39" title="天天试用"></a></div>
+        <div class="ad"><!--<a href="javascript:tools.inviteFriend()"><img src="<?php echo $baseUrl;?>images/del_55073.jpg" width="550" height="73"></a>--></div>
     </div>
     <div class="nav-user">
         <ul class="nav">
@@ -269,7 +286,7 @@
                 $userCenterUrl = Yii::app()->createUrl("main/index/UserCenter");
             ?>
             <li class="newMess"><a href="<?php echo $userCenterUrl;?>">新信息(<span class="msgLeft"><?php echo $this->_userInfo['unread_msg_count'];?></span>)</a></li>
-            <li class="yb"><a href="<?php echo $userCenterUrl;?>">元宝(<?php echo $this->_userInfo['gold'];?>)</a></li>
+            <li class="yb"><a href="<?php echo $userCenterUrl;?>">元宝(<span class="user_gold"><?php echo $this->_userInfo['gold'];?></span>)</a></li>
             <li class="avatar"><a href="<?php echo $userCenterUrl;?>"><img src="<?php echo $this->_userInfo['head'];?>" width="32" height="32" alt="<?php echo $this->_userInfo['nickname'];?>"></a></li>
         </ul>
     </div>
@@ -323,6 +340,7 @@
 <?php
     //弹窗
     $this->renderPartial("////common/popbox");
+    $this->renderPartial("////common/float_attention");
 ?>
 </body>
 </html>

@@ -43,10 +43,13 @@ class Trigger extends Controller
     public static function shareAward($type){
         $config = Helper::loadAwardConfig(__FUNCTION__);
         $curAward = $config[$type];
-        $userInfo = Userinfo::getUserId(1);
-        if(!empty($userInfo['useid']) && is_numeric($userInfo['userid'])){
-            if(Useraward::addUserGold($userInfo['userid'], $curAward))
+        $userInfo = Userinfo::getUserId(0);
+        if(!empty($userInfo['userid']) && is_numeric($userInfo['userid'])){
+            $result = Useraward::addUserGold($userInfo['userid'], $curAward);
+            if($result){
                 Userinfo::updateUserInfo();
+                echo json_encode(array("usergold" =>$userInfo['gold'] + $curAward));
+            }
         }
     }
 }

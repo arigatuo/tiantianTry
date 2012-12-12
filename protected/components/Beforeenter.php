@@ -28,6 +28,8 @@ class Beforeenter extends CController{
      * @return bool
      */
     public function enterRecord($uid){
+        $return = null;
+
         $cacheKey = md5(__CLASS__.__FUNCTION__.$uid);
         $cacheTime = 5 * 60;
         $cacheVal = Yii::app()->cache->get($cacheKey);
@@ -78,8 +80,10 @@ class Beforeenter extends CController{
         }
 
         if($isChange && $theUidRecord->save()){
-            return TRUE;
+            $return = TRUE;
         }
+
+        return $return;
     }
 
     /**
@@ -89,6 +93,8 @@ class Beforeenter extends CController{
      * @return bool
      */
     public function awardConsistent($consistent, $uid){
+        $return = null;
+
         $config = new CConfiguration();
         $config->loadFromFile("protected/config/award.config.php");
         $rewardRule = $config->itemAt("rewardRule");
@@ -106,9 +112,11 @@ class Beforeenter extends CController{
 
                 if($newUserMsg->save()){
                     Userinfo::updateUserInfo();
-                    return true;
+                    $return = true;
                 }
             }
         }
+
+        return $return;
     }
 }

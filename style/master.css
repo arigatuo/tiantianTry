@@ -23,7 +23,7 @@
 .subnav { height:27px; line-height:27px; background:#ebebeb; }
 .subnav .categories { float:left; }
 .subnav .categories dt { float:left; width:102px; text-align:center; margin-right:-47px; }
-.subnav .categories dd { float:left; margin-left:47px; }
+.subnav .categories dd { float:left; margin-left:27px; }
 .subnav .categories .strong a, .subnav .categories .strong a:visited { color:#c8215b; }
 .subnav .tool { float:right; }
 .subnav .tool dt { float:left; padding-left:9px; background:url(../images/s.png) no-repeat -756px -187px; margin-right:8px; }

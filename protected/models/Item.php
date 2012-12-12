@@ -51,9 +51,9 @@ class Item extends CActiveRecord
 			array('is_top, free_trans', 'numerical', 'integerOnly'=>true),
 			array('price, special_price', 'numerical'),
 			array('title, photo,fixDate', 'length', 'max'=>255),
-			array('category_id, endtime, pieces, share_time, fav_time, already_buy', 'length', 'max'=>10),
+			array('category_id,  pieces, share_time, fav_time, already_buy', 'length', 'max'=>10),
 			array('is_free', 'length', 'max'=>1),
-			array('description', 'safe'),
+			array('description, endtime', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('item_id, price, special_price, title, endtime, is_free, category_id, pieces, description, share_time, fav_time, already_buy, photo, is_top', 'safe', 'on'=>'search'),

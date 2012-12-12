@@ -5,7 +5,7 @@
     <div class="top">
         <div class="u"><a href="#" target="_blank" class="pic"><img src="<?php echo $this->_userInfo['head'];?>" width="50" height="50" alt="<?php echo $this->_userInfo['nickname'];?>"></a>
             <div class="txt">
-                <div class="ybs">元宝数:<strong><?php echo $this->_userInfo['gold'];?></strong></div>
+                <div class="ybs">元宝数:<strong><span class="user_gold"><?php echo $this->_userInfo['gold'];?></span></strong></div>
                 <div class="login">连续登陆:<strong><?php echo $this->_userInfo['loginRecord']['consistent'];?></strong> 天</div>
             </div>
         </div>
@@ -64,7 +64,7 @@
         <?php
         if(!empty($favArray)){
             foreach($favArray as $fav){
-                $curHref = "javascript:appTools.openurl('{$fav['attributes']['url']}')";
+                $curHref = "javascript:appTools.openUrl('{$fav['attributes']['url']}')";
                 ?>
                 <li><a href="<?php echo $curHref;?>" class="pic"><img src="<?php echo $fav['attributes']['photo'];?>" width="50" height="50" alt="<?php echo $fav['attributes']['title'];?>"/></a> <a href="<?php echo $curHref;?>" class="txt"><?php echo Helper::truncate_utf8_string($fav['attributes']['title'], 30);?></a><!--<a href="javascript:void(0);" class="del">删除</a>--><a href="<?php echo $curHref;?>" class="gotobuy">购买</a></li>
                 <?php

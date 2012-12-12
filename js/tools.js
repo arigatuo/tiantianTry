@@ -6,7 +6,8 @@ var appTools = {
 
     //分享后打开url
     openUrlWithShare : function(xid, url){
-        tools.sendStory(xid, appTools.openUrl(url));
+        //tools.sendStory(xid, appTools.openUrl(url));
+        tools.sendStory(url, appTools.openUrl, xid);
     },
 
     //分享
@@ -110,7 +111,7 @@ var appTools = {
                 if(parseInt(data.result) > 0){
                     appTools.showFloat(4, function(){ location.reload();});
                 }else{
-                    alert("您还没有先到先抢， 请去用户中心购买");
+                    alert("您还没有折扣到底卡， 请去用户中心购买");
                     if(location.href.indexOf("UserCenter") < 0 ){
                         location.href = baseUrl + "/main/Index/UserCenter/";
                     }
@@ -122,7 +123,7 @@ var appTools = {
     //显示浮动层
     showFloat : function(floatId, closeFunc){
         var content = jQuery("#overlay"+floatId).html();
-        jQuery.colorbox({html:content, overlayClose:false, opacity:0.6 , onClosed:closeFunc});
+        jQuery.colorbox({html:content, overlayClose:false, opacity:0.6 , onClosed:closeFunc, top:"25px" 		});
         jQuery("#cboxClose").remove();
     },
 
@@ -135,6 +136,10 @@ var appTools = {
     //关闭init窗口
     closeFirstEnter : function(){
         jQuery(".init").hide();
+    },
+
+    userAddGoldInJs: function(usergold){
+        jQuery(".user_gold").html(usergold);
     }
 };
 

@@ -17,7 +17,7 @@
             <div class="w">
                 <div class="cbd">
                     <span class="close" title="关闭"></span>
-                    <a href="javascript:tools.inviteFriend('fav_time', tools.trigger);" title="邀请好友赚100元宝"></a></div>
+                    <a href="javascript:tools.inviteFriend('fav_time', tools.trigger);jQuery.colorbox.close();" title="邀请好友赚100元宝"></a></div>
                 <div class="opacitylay"></div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="w">
                 <div class="cbd">
                     <span class="close" title="关闭"></span>
-                    <a href="javascript:tools.sendStory('share_time', tools.trigger);" title="分享应用赚50元宝"></a></div>
+                    <a href="javascript:tools.sendStory('share_time', tools.trigger);jQuery.colorbox.close();" title="分享应用赚50元宝"></a></div>
                 <div class="opacitylay"></div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                 if(!empty($this->_gotFirstInfo)){
                     foreach($this->_gotFirstInfo as $info){
                             $itemAttributes = $info->getAttributes();
-                            $curHref = "javascript:appTools.openUrl('{$itemAttributes['url']}')";
+                            $curHref = "javascript:appTools.openUrl('{$itemAttributes['url']}');jQuery.colorbox.close()";
                         ?>
                         <span class="close" title="关闭"></span>
                         <div class="cbd clearfix"><div class="left">
@@ -48,7 +48,7 @@
                         </div>
                             <div class="right">
                                 <div class="price">￥<span class="np"><?php echo $itemAttributes['special_price']?></span><span class="yjt">原价：</span><span class="yjc"><?php echo $itemAttributes['price'];?></span></div>
-                                <div class="zk"><span class="n">5</span><span class="f">折</span></div>
+                                <div class="zk"><span class="n"><?php printf("%1.1f", $itemAttributes['special_price']/$itemAttributes['price']*10);?></span><span class="f">折</span></div>
                                 <p class="intr">
                                     <?php echo CHtml::encode($itemAttributes['description']);?>
                                 <p>

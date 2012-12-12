@@ -60,7 +60,7 @@ return array(
 
     'shareAward' => array(
         //分享奖励金币数
-        'share_time' => 5,
-        'fav_time' => 10,
+        'share_time' => 50,
+        'fav_time' => 100,
     ),
 );
