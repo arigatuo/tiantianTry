@@ -66,59 +66,50 @@
 </style>
 <!--弹窗JS-->
 <script type="text/javascript">
-
     var isfirst=1;
-    function showWindow()
-    {
-        fusion2.iface.updateClientRect
-                (
-                        function(rec)
-                        {
-                            if(rec.top>600 && isfirst==1)
-                            {
-                                document.getElementById('popt').style.width = document.body.scrollWidth + "px";
-                                document.getElementById('popt').style.height = document.body.scrollHeight + "px";
-
-
-                                setTimeout(function (){jQuery('#popt').fadeIn('slow');},0);
-
-                                setTimeout(function (){jQuery('#poptDiv').fadeIn('slow');},0);
-
-                                setTimeout(function (){jQuery('#popt').fadeOut('slow');},11000);
-
-                                setTimeout(function (){jQuery('#poptDiv').fadeOut('slow');},11000);
-                                isfirst=0;
-                            }
-                            else
-                            {
-                                return false;
-                            }
-                        }
-                );
-    }
-    jQuery(function(){
-        if(!_isFans){
-            showWindow();
+    var floatAttention = {
+        showWindow : function(){
+            fusion2.iface.updateClientRect (
+                function(rec)
+                {
+                    if(rec.top>600 && isfirst==1)
+                    {
+                        document.getElementById('popt').style.width = document.body.scrollWidth + "px";
+                        document.getElementById('popt').style.height = document.body.scrollHeight + "px";
+                        setTimeout(function (){jQuery('#popt').fadeIn('slow');},0);
+                        setTimeout(function (){jQuery('#poptDiv').fadeIn('slow');},0);
+                        setTimeout(function (){jQuery('#popt').fadeOut('slow');},11000);
+                        setTimeout(function (){jQuery('#poptDiv').fadeOut('slow');},11000);
+                        isfirst=0;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            );
+        },
+        hideWindow : function(){
+            document.getElementById('popt').style.display='none';document.getElementById('poptDiv').style.display='none';
         }
-    });
+    };
 </script>
 
 
 <!--弹窗部分-->
 <div id="popt" style=" top: 0px; left: 0px; margin:0 auto;filter:alpha(opacity=70);opacity:0.7; z-index:1500;"></div>
 <div id="poptDiv" style="height:215px; width:350px; left:205px; top:970px; z-index:35000; position:absolute;">
-    <p class="gb" onclick="document.getElementById('popt').style.display='none';document.getElementById('poptDiv').style.display='none';"></p>
+    <p class="gb" onclick="javascript:floatAttention.hideWindow();"></p>
     <div class="wel">
         <h3><span style="color:#fcce0e;">关注我们</span>的<span style="color:#82c9ff; font-family:Arial;">QQ</span>空间</h3>
         <p>&gt;&gt;更多精彩内容</p>
         <p>&gt;&gt;名品试用等你免费拿</p>
     </div>
     <div style="width:284px; margin:0 auto; height:auto; overflow:hidden;">
-        <div style="float:left;width:126px;font-size:14px; text-indent:80px; overflow:hidden;"><a href="javascript:void(0)" onclick="javascript:document.getElementById('popt').style.display='none';document.getElementById('poptDiv').style.display='none'">关闭</a></div>
-        <div style="float:left; width:130px; overflow:hidden;"><iframe scrolling="no" frameborder="0" src="http://open.qzone.qq.com/like?url=http%3A%2F%2Fuser.qzone.qq.com%2F2202411745&amp;type=button_num&amp;width=105&amp;height=24" allowtransparency="true" border="0"></iframe></div>
+        <div style="float:left;width:126px;font-size:14px; text-indent:80px; overflow:hidden;"><a href="javascript:void(0)" onclick="javascript:floatAttention.hideWindow();">关闭</a></div>
+        <div style="float:left; width:130px; overflow:hidden;"><iframe id="qqiframe" scrolling="no" frameborder="0" src="http://open.qzone.qq.com/like?url=http%3A%2F%2Fuser.qzone.qq.com%2F2202411745&amp;type=button_num&amp;width=105&amp;height=24" allowtransparency="true" border="0"></iframe></div>
     </div>
 </div>
-
 <!--弹窗部分结束-->
 
 

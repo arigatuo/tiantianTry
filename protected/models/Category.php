@@ -92,4 +92,9 @@ class Category extends CActiveRecord
         $this->ctime = time();
         return parent::beforeSave();
     }
+
+    public function returnCategoryName($category_id){
+        $tmp = Category::model()->findByPk($category_id);
+        return !empty($tmp) ? $tmp->getAttribute("category_name") : "";
+    }
 }

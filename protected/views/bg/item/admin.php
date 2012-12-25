@@ -51,7 +51,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
         'special_price',
         array(
           'name' => 'category_id',
-          'value' => 'Category::model()->findByPk($data->category_id)->getAttribute("category_name")',
+          'value' => 'Category::returnCategoryName($data->category_id)',
           'filter' => CHtml::listData(Category::model()->findAll(), 'category_id', 'category_name'),
         ),
         array(

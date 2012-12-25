@@ -124,8 +124,9 @@ class Item extends CActiveRecord
 		$criteria->compare('is_top',$this->is_top);
         $criteria->compare('type_id',$this->type_id);
         $criteria->compare('type_id',$this->url);
-
+        /*
         $criteria->compare('endtime',$this->endtime,true);
+        */
 
         //$criteria->order = " item_id DESC ";
 

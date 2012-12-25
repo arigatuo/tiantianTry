@@ -16,8 +16,8 @@ return array(
     //'serverName' => 'openapi.tencentyun.com',
 
     //关注的qq号
-    'page_id' => '625617480',
-
+    //'page_id' => '625617480',
+    'page_id' => '2202411745',
 
 	//分享窗口内容
 	"dialog_title" => '我又发现了新试用，哈哈！',
@@ -25,5 +25,4 @@ return array(
 	"dialog_summary" => '天天都有精选的0元试用等你来拿，而且包邮哦！！',
 	"dialog_msg" => '哇~~试用都是精品啊，而且有特价的宝贝，真心不错~~',
 	"dialog_context" => '哇~~试用都是精品啊，而且有特价的宝贝，真心不错~~',
-
 );

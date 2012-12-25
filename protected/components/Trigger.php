@@ -44,12 +44,15 @@ class Trigger extends Controller
         $config = Helper::loadAwardConfig(__FUNCTION__);
         $curAward = $config[$type];
         $userInfo = Userinfo::getUserId(0);
+        $result = 0;
         if(!empty($userInfo['userid']) && is_numeric($userInfo['userid'])){
             $result = Useraward::addUserGold($userInfo['userid'], $curAward);
             if($result){
                 Userinfo::updateUserInfo();
-                echo json_encode(array("usergold" =>$userInfo['gold'] + $curAward));
+                $result = $userInfo['gold'] + $curAward;
             }
         }
+
+        return $result;
     }
 }

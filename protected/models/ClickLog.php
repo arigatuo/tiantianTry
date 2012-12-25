@@ -1,20 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "qfa_user_award_log".
+ * This is the model class for table "qfa_click_log".
  *
- * The followings are the available columns in table 'qfa_user_award_log':
- * @property string $autoid
- * @property string $uid
- * @property string $award
+ * The followings are the available columns in table 'qfa_click_log':
+ * @property string $logid
+ * @property string $item_id
+ * @property string $button_type
  * @property string $ctime
  */
-class UserAwardLog extends CActiveRecord
+class ClickLog extends CActiveRecord
 {
+    public $button_type_array = array("buy", "share", "fav");
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return UserAwardLog the static model class
+	 * @return ClickLog the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -26,7 +27,7 @@ class UserAwardLog extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'qfa_user_award_log';
+		return 'qfa_click_log';
 	}
 
 	/**
@@ -37,11 +38,13 @@ class UserAwardLog extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('uid, award, ctime', 'required'),
-			array('uid, award, ctime', 'length', 'max'=>10),
+			array('item_id, button_type, ctime', 'required'),
+			array('item_id', 'length', 'max'=>20),
+			array('button_type', 'length', 'max'=>5),
+			array('ctime', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('autoid, uid, award, ctime', 'safe', 'on'=>'search'),
+			array('logid, item_id, button_type, ctime', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,9 +65,9 @@ class UserAwardLog extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'autoid' => 'Autoid',
-			'uid' => 'Uid',
-			'award' => 'Award',
+			'logid' => 'Logid',
+			'item_id' => 'Item',
+			'button_type' => 'Button Type',
 			'ctime' => 'Ctime',
 		);
 	}
@@ -80,13 +83,33 @@ class UserAwardLog extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('autoid',$this->autoid,true);
-		$criteria->compare('uid',$this->uid,true);
-		$criteria->compare('award',$this->award,true);
+		$criteria->compare('logid',$this->logid,true);
+		$criteria->compare('item_id',$this->item_id,true);
+		$criteria->compare('button_type',$this->button_type,true);
 		$criteria->compare('ctime',$this->ctime,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+
+
+    /**
+     * 增加新的记录
+     * @param $newInfo array(item_id, button_type)
+     * @return bool
+     */
+    public function addRecord($newInfo){
+        $return = false;
+        if(!empty($newInfo) && !empty($newInfo['item_id']) && !empty($newInfo['button_type'])
+                && in_array($newInfo['button_type'], $this->button_type_array) ){
+                    $newRecord = new ClickLog();
+                    $newInfo['ctime'] = date("Ymd", time());
+                    $newRecord->setAttributes($newInfo);
+                    if($newRecord->save()){
+                        $return = TRUE;
+                    }
+        }
+        return $return;
+    }
 }

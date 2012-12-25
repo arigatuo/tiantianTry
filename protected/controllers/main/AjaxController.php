@@ -98,6 +98,12 @@ class AjaxController extends Controller
             ){
                 //分享奖励
                 Trigger::shareAward($_POST['type']);
+                $newClick = new ClickLog();
+                $clickInfo = array(
+                    'itemId' => $_POST['itemId'],
+                    'type' => $_POST['type'],
+                );
+                $newClick->addRecord($clickInfo);
             }else{
                 echo -1;
                 die();
@@ -120,8 +126,10 @@ class AjaxController extends Controller
             $userInfo = Userinfo::getUserId(1, 0);
             if(!empty($userInfo['userid'])){
                 $uid = $userInfo['userid'];
-                if(!empty($_GET['the_type']))
-                    Trigger::shareAward($_GET['the_type']);
+                if(!empty($_GET['the_type'])){
+                    $result = Trigger::shareAward($_GET['the_type']);
+                    echo json_encode(array('usergold' => $result));
+                }
             }
         }
     }
@@ -289,5 +297,20 @@ class AjaxController extends Controller
         $newSession = new CHttpSession();
         $newSession->open();
         $newSession['firstEnter'] = 0;
+    }
+
+    //设置click
+    public function actionClickLog(){
+        if(Yii::app()->request->isAjaxRequest){
+            $request = Yii::app()->request;
+            $button_type = $request->getParam('button_type');
+            $item_id = $request->getParam('item_id');
+            $newClick = new ClickLog();
+            $clickInfo = array(
+                'button_type' => $button_type,
+                'item_id' => $item_id,
+            );
+            $newClick->addRecord($clickInfo);
+        }
     }
 }

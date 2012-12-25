@@ -144,14 +144,13 @@ class Qqmember extends CController
                 }
             }
         }
-
-
     }
 
     //更新是否关注状态
     public function update_user_is_login(){
         $session = new CHttpSession();
         $session->open();
+        $isFans = 0;
         if(!empty($session['userInfo'])){
             $userInfo = $session['userInfo'];
             $sdk = self::newSdk();
@@ -160,9 +159,8 @@ class Qqmember extends CController
                 $isFans = ($ret_is_fans['ret'] == 0) ? $ret_is_fans['is_fans'] : 0;
                 $userInfo['isFans'] = $isFans;
                 $session['userInfo'] = $userInfo;
-
-                return $isFans;
             }
         }
+        return $isFans;
     }
 }

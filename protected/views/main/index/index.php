@@ -19,8 +19,7 @@
                     if($actionId == "TryPageTwo"){
                 ?>
                             <div class="num  num-style2">
-                              <div class="left ">购买人数:<strong><?php echo max(0,$itemAttributes['pieces'] - $itemAttributes['already_buy']);?></strong>人</div>
-                            </div>
+                              <div class="left ">购买人数:<strong><?php echo max(0,$itemAttributes['pieces'] - $itemAttributes['already_buy']);?></strong>人</div> </div>
                 <?php
                     }else{
                         if(!empty($itemAttributes['free_trans'])){

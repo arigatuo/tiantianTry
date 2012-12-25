@@ -7,6 +7,7 @@ var appTools = {
     //分享后打开url
     openUrlWithShare : function(xid, url){
         //tools.sendStory(xid, appTools.openUrl(url));
+        appTools.clickLog(xid, 'buy');
         tools.sendStory(url, appTools.openUrl, xid);
     },
 
@@ -140,6 +141,10 @@ var appTools = {
 
     userAddGoldInJs: function(usergold){
         jQuery(".user_gold").html(usergold);
+    },
+
+    clickLog: function(item_id, button_type){
+        jQuery.getJSON( baseUrl + 'main/Ajax/ClickLog', {item_id:item_id, button_type:button_type});
     }
 };
 
@@ -169,36 +174,81 @@ jQuery(function(){
             appTools.useGotFirst();
         }
     });
-    //倒计时
-    /*
-    var dateTime = new Date();
-    var difference = dateTime.getTime() - serverTime; //客户端与服务器时间偏移量
 
-     setInterval(function(){
-     $(".time").each(function(){
-     var obj = $(this);
-     var endTime = new Date(parseInt(obj.attr('timevalue')) * 1000);
-     var nowTime = new Date();
-     var nMS=endTime.getTime() - nowTime.getTime() + difference;
-     var myD=Math.floor(nMS/(1000 * 60 * 60 * 24)); //天
-     var myH=Math.floor(nMS/(1000*60*60)) % 24 + (myD * 24); //小时
-     var myM=Math.floor(nMS/(1000*60)) % 60; //分钟
-     var myS=Math.floor(nMS/1000) % 60; //秒
-     //var myMS=Math.floor(nMS/100) % 10; //拆分秒
-     if(myD>= 0){
-     //var str = myD+"天"+myH+"小时"+myM+"分"+myS+"."+myMS+"秒";
-     obj.find(".shi").eq(0).html(myH);
-     obj.find(".fen").eq(0).html(myM);
-     obj.find(".miao").eq(0).html(myS);
-     }else{
-     obj.find(".shi").eq(0).html(0);
-     obj.find(".fen").eq(0).html(0);
-     obj.find(".miao").eq(0).html(0);
-     }
-     });
-     }, 200); //每个0.1秒执行一次
-     */
+    //设置自动高度
+    fusion2.canvas.setHeight
+        ({
+            height : 0
+        });
+
+    //收藏
+    $(".favorite2").click( tools.favBox );
+    $(".handsel").click( tools.shareBox );
+
+    //关注
+    if(!_isFans)
+        tools.bindHover();
+
+    if(_isFirstEnter){
+        appTools.firstEnter();
+    }
+    //打开用户关注状态检查
+    tools.updateState();
+
+    qqIframeBind();
 });
 
+var IframeOnClick = {
+    resolution: 1000,
+    iframes: [],
+    interval: null,
+    Iframe: function() {
+        this.element = arguments[0];
+        this.cb = arguments[1];
 
+        this.hasTracked = false;
+    },
+    track: function(element, cb) {
+        this.iframes.push(new this.Iframe(element, cb));
+        if (!this.interval) {
+            var _this = this;
+            this.interval = setInterval(function() { _this.checkClick(); }, this.resolution);
+        }
+    },
+
+    checkClick: function() {
+        if (document.activeElement) {
+            var activeElement = document.activeElement;
+            for (var i in this.iframes) {
+                if (activeElement === this.iframes[i].element) { // user is in this Iframe
+                    if (this.iframes[i].hasTracked == false) {
+                        this.iframes[i].cb.apply(window, []);
+
+                        this.iframes[i].hasTracked = true;
+                    }
+                } else {
+                    this.iframes[i].hasTracked = false;
+                }
+            }
+        }
+    }
+};
+
+function iframeBind(){
+    IframeOnClick.track(document.getElementById("cur_iframe"), function() {
+        $(".prolist .item").unbind();
+        $(".qzone").hide();
+
+        if(_update == 0){
+            tools.updateState();
+            _update = 1;
+        }
+    });
+}
+
+function qqIframeBind(){
+    IframeOnClick.track(document.getElementById("qqiframe"), function() {
+        floatAttention.hideWindow();
+    });
+}
 

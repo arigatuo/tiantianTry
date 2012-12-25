@@ -66,6 +66,9 @@
             favBox: function(event) {
                 var obj = $(this);
                 var xid = obj.attr("xid");
+
+                //log
+                appTools.clickLog(xid, 'fav');
                 //tools.addFav(xid);
                 tools.sendStory(xid, tools.addFav);
                 /*
@@ -143,28 +146,15 @@
                 obj.find("iframe").attr("id","cur_iframe");
                 iframeBind();
             },
+            //分享
             shareBox : function(event){
                 var obj = $(this);
                 var xid = obj.attr("xid");
+
+                //log
+                appTools.clickLog(xid, 'share');
                 //tools.sendStory(xid, tools.addShare);
                 tools.inviteFriend(xid, tools.addShare);
-                //tools.addShare(xid);
-                /*
-                var content = tools.shareContent;
-                fusion2.dialog.sendStory
-                        ({
-                            title : content.title,
-                            img: content.img,
-                            summary : content.summary,
-                            msg: content.msg,
-                            //button :"获取能量",
-                            context: content.context,
-                            onSuccess : function (opt)
-                            {
-                                tools.addShare(xid);
-                            }
-                        });
-                        */
             },
             trigger : function(the_type){
                 if(the_type == "fav_time"){
@@ -178,11 +168,11 @@
                 $.ajax({
                     url: '<?php echo Yii::app()->createUrl("main/Ajax/UpdateIsFans"); ?>',
                     success: function(msg){
-                        /*
-                        if(parseInt(msg) == 0){
-                            tools.bindHover();
+                        if(parseInt(msg) == 1){
+                            _isFans = 1;
+                        }else{
+                            floatAttention.showWindow();
                         }
-                        */
                     }
                 });
             },
@@ -191,79 +181,6 @@
                 //$(".prolist .item").hover(tools.attention_box);
             }
         };
-        $(function(){
-            //设置自动高度
-            fusion2.canvas.setHeight
-            ({
-                height : 0
-            });
-
-            //收藏
-            $(".favorite2").click( tools.favBox );
-            $(".handsel").click( tools.shareBox );
-
-            //关注
-            if(!_isFans)
-                tools.bindHover();
-
-            if(_isFirstEnter){
-                appTools.firstEnter();
-            }
-            //打开用户关注状态检查
-            tools.updateState();
-        });
-    </script>
-
-    <script type="text/javascript">
-        var IframeOnClick = {
-            resolution: 1000,
-            iframes: [],
-            interval: null,
-            Iframe: function() {
-                this.element = arguments[0];
-                this.cb = arguments[1];
-
-                this.hasTracked = false;
-            },
-            track: function(element, cb) {
-                this.iframes.push(new this.Iframe(element, cb));
-                if (!this.interval) {
-                    var _this = this;
-                    this.interval = setInterval(function() { _this.checkClick(); }, this.resolution);
-                }
-            },
-
-            checkClick: function() {
-                if (document.activeElement) {
-                    var activeElement = document.activeElement;
-                    for (var i in this.iframes) {
-                        if (activeElement === this.iframes[i].element) { // user is in this Iframe
-                            if (this.iframes[i].hasTracked == false) {
-                                this.iframes[i].cb.apply(window, []);
-
-                                this.iframes[i].hasTracked = true;
-                            }
-                        } else {
-                            this.iframes[i].hasTracked = false;
-                        }
-                    }
-                }
-            }
-        };
-
-        function iframeBind(){
-            IframeOnClick.track(document.getElementById("cur_iframe"), function() {
-                $(".prolist .item").unbind();
-                $(".qzone").hide();
-
-                if(_update == 0){
-                    tools.updateState();
-                    _update = 1;
-                }
-            });
-        }
-
-
     </script>
 </head>
 <body>

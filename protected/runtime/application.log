@@ -8013,3 +8013,450 @@ Stack trace:
 REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
 HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
 ---
+2012/12/13 14:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
+---
+2012/12/13 14:21:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
+---
+2012/12/13 14:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
+---
+2012/12/13 14:21:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/5
+---
+2012/12/13 14:21:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/5
+---
+2012/12/13 14:27:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/7
+---
+2012/12/13 14:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/7
+---
+2012/12/13 14:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/6
+---
+2012/12/13 14:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/6
+---
+2012/12/13 14:27:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/5
+---
+2012/12/13 14:27:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/4
+---
+2012/12/13 14:27:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/4
+---
+2012/12/13 14:27:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/3
+---
+2012/12/13 14:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/2
+---
+2012/12/13 14:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/2
+---
+2012/12/13 14:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/2
+---
+2012/12/13 14:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/2
+---
+2012/12/13 14:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/2?Item%5Bitem_id%5D=&Item%5Btitle%5D=&Item%5Bprice%5D=&Item%5Bspecial_price%5D=&Item%5Bcategory_id%5D=10&Item%5Btype_id%5D=&Item%5Bphoto%5D=&Item%5Bendtime%5D=&Item%5BfixDate%5D=&Item_page=1
+---
+2012/12/13 15:36:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/2?Item%5Bitem_id%5D=&Item%5Btitle%5D=&Item%5Bprice%5D=&Item%5Bspecial_price%5D=&Item%5Bcategory_id%5D=10&Item%5Btype_id%5D=&Item%5Bphoto%5D=&Item%5Bendtime%5D=&Item%5BfixDate%5D=&Item_page=1
+---
+2012/12/13 15:36:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/2?Item%5Bitem_id%5D=&Item%5Btitle%5D=&Item%5Bprice%5D=&Item%5Bspecial_price%5D=&Item%5Bcategory_id%5D=10&Item%5Btype_id%5D=&Item%5Bphoto%5D=&Item%5Bendtime%5D=&Item%5BfixDate%5D=&Item_page=1
+---
+2012/12/13 15:36:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
+---
+2012/12/13 15:36:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/6
+---
+2012/12/13 15:36:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/3
+---
+2012/12/13 15:36:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/7
+---
+2012/12/13 15:38:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/7
+---
+2012/12/13 15:38:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/8
+---
+2012/12/13 15:38:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/4
+---
+2012/12/13 15:39:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/8
+---
+2012/12/13 15:39:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/11
+---
+2012/12/13 15:39:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/15
+---
+2012/12/13 16:04:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/10
+---
+2012/12/13 16:04:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/10
+---
+2012/12/13 16:04:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin/Item_page/5
+---
+2012/12/13 16:04:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
+---
+2012/12/13 16:04:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin?Item%5Bitem_id%5D=&Item%5Btitle%5D=&Item%5Bprice%5D=&Item%5Bspecial_price%5D=&Item%5Bcategory_id%5D=&Item%5Btype_id%5D=3&Item%5Bphoto%5D=&Item%5Bendtime%5D=&Item%5BfixDate%5D=&Item_page=1
+---
+2012/12/13 16:04:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin?Item%5Bitem_id%5D=&Item%5Btitle%5D=&Item%5Bprice%5D=&Item%5Bspecial_price%5D=&Item%5Bcategory_id%5D=&Item%5Btype_id%5D=&Item%5Bphoto%5D=&Item%5Bendtime%5D=&Item%5BfixDate%5D=&Item_page=1
+---
+2012/12/13 16:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121109/f4ecf292d86666226c1c5eed17f3ddd2.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121109...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121109/f4ecf292d86666226c1c5eed17f3ddd2.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/5b132fa2215a6c28819eabda14812065.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/5b132fa2215a6c28819eabda14812065.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/cd8f4513f100d953a153a9ed8ae652ed.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/cd8f4513f100d953a153a9ed8ae652ed.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/615c17b09d4a23c77970d917d6357648.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/615c17b09d4a23c77970d917d6357648.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/01dfcb9d0e584ac0990ac2d5685713ef.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/01dfcb9d0e584ac0990ac2d5685713ef.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/56fcecf902b7e579bfdea3e3d1f27659.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/56fcecf902b7e579bfdea3e3d1f27659.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/e25f23cb0f514b32ca262573ac1c397c.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/e25f23cb0f514b32ca262573ac1c397c.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/54bfd530d45758df1feb7cfecc44776c.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/54bfd530d45758df1feb7cfecc44776c.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/b666d0c27949d83cda7f13d841a6c353.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/b666d0c27949d83cda7f13d841a6c353.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "upload/20121112/258490b934a6dacc2d83d7631caf32be.jpg"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('upload/20121112...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/upload/20121112/258490b934a6dacc2d83d7631caf32be.jpg
+HTTP_REFERER=http://www.myapp.com/appone/bg/commentHead/admin
+---
+2012/12/13 16:05:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "assets/6c182190/jui/js/jquery.ui.datepicker-en.js"。' in /var/www/html/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/html/yii/web/CWebApplication.php(142): CWebApplication->runController('assets/6c182190...')
+#1 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/html/appone/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/appone/assets/6c182190/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://www.myapp.com/appone/bg/item/admin
+---
+2012/12/24 14:21:26 [error] [php] Undefined index: pf (/var/www/html/appone/protected/vendors/qqsdk/OpenApiV3.php:165)
+Stack trace:
+#0 /var/www/html/appone/protected/controllers/main/IndexController.php(32): Qqmember->memberEnter()
+#1 /var/www/html/yii/web/actions/CInlineAction.php(50): IndexController->actionIndex()
+#2 /var/www/html/yii/web/CController.php(309): CInlineAction->runWithParams()
+#3 /var/www/html/yii/web/CController.php(287): IndexController->runAction()
+#4 /var/www/html/yii/web/CController.php(266): IndexController->runActionWithFilters()
+#5 /var/www/html/yii/web/CWebApplication.php(276): IndexController->run()
+#6 /var/www/html/yii/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /var/www/html/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /var/www/html/appone/index.php(13): CWebApplication->run()
+REQUEST_URI=/appone/?openid=F43F3336D5C06A88AF709AA77AE9F630&openkey=40A7DB75A487100C121E45F26EF31E99&pf=qzone&pfkey=5a7e02d0c4aa2c8ce6c31607ddcaad15
+in /var/www/html/appone/protected/vendors/qqsdk/OpenApiV3.php (165)
+in /var/www/html/appone/protected/components/Qqmember.php (63)
+in /var/www/html/appone/protected/components/Qqmember.php (88)
